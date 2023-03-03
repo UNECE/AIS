@@ -4,9 +4,10 @@ Repository for ONS-UNECE Machine Learning Group 2022 AIS Theme Grouop
 
 ## Data set: 12nm bounding box based on World Port Index
 
-* Description: TBC.... 3630 ports
+* Description: This is bounding boxes developed using GIS software to create 12 nauticle mile bounding boxes on each port in the [World Port Index (WPI)](https://msi.nga.mil/Publications/WPI) 2019 via geographic buffering. Geographic buffering (a.k.a Geodesic buffering) are those that account for the actual shape of the earth (an ellipsoid, or more properly, a geoid). Distances are calculated between two points on a curved surface (the geoid) as opposed to two points on a flat surface (the Cartesian plane). You should always consider creating geodesic buffers when your input features are dispersed (cover multiple UTM zones, large regions, or even the whole globe). Bounding boxes are then created from these bounding boxes as these are much simpler geographci objects and the intended use is as a pre-filter and data reduction using these as spatial filters. 
+
 * Source: Justin McGurk (Statistics Ireland)
-* Preview (header and first two rows)
+* Preview (header and first two rows, in total 3630 ports)
 <table>
 <tbody>
   <tr>
