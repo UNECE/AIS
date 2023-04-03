@@ -17,9 +17,12 @@ Port Polygons are important for generating statistics based on geospatial filter
 
 **6) Berth polygons using DBSCAN**: create refined version of berth polygons using DBSCAN based on count of AIS signals within (high-resolution) H3 hexagons. 
 
+The cookbook is available here (link to be made available).
 
 ## Code: Google colab version of AIS Berth Polygon Cookbook
-Executing the full version of the code is possible through [UN Global Platform (UNGP)](https://unstats.un.org/bigdata/un-global-platform.cshtml) as the access to raw AIS data is only available through UNGP. To help Google colab version is a light version of the full cookbook that contains parts that do not require raw AIS data access. The colab version is available [here](https://colab.research.google.com/drive/1UwFPDhD1OxAmED6uvMSGS-ZgUPrRVMXY?usp=sharing).
+Please note that in order to execute the full version of the code, access to raw AIS data is required, which is only available through the [UN Global Platform (UNGP)](https://unstats.un.org/bigdata/un-global-platform.cshtml). 
+
+To provide an overview of the cookbook without requiring access to UNGP, we have created a light version of the cookbook in Google Colab. The Colab version contains only the parts of the cookbook that do not require raw AIS data access. You can access the Colab version of the cookbook [here](https://colab.research.google.com/drive/1UwFPDhD1OxAmED6uvMSGS-ZgUPrRVMXY?usp=sharing).
 
 
 ## Data set: 12nm bounding box based on World Port Index
