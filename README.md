@@ -19,16 +19,16 @@ Port Polygons are important for generating statistics based on geospatial filter
 
 The cookbook is available here (link to be made available).
 
+
 ## Code: Google colab version of AIS Berth Polygon Cookbook
 Please note that in order to execute the full version of the code, access to raw AIS data is required, which is only available through the [UN Global Platform (UNGP)](https://unstats.un.org/bigdata/un-global-platform.cshtml). 
 
 To provide an overview of the cookbook without requiring access to UNGP, we have created a light version of the cookbook in Google Colab. The Colab version contains only the parts of the cookbook that do not require raw AIS data access. You can access the Colab version of the cookbook [here](https://colab.research.google.com/drive/1UwFPDhD1OxAmED6uvMSGS-ZgUPrRVMXY?usp=sharing).
 
 
-## Data set: 12nm bounding box based on World Port Index
+## Data set for cookbook: 12nm bounding box based on World Port Index
 
 * Description: This is bounding boxes developed using GIS software to create 12 nauticle mile bounding boxes on each port in the [World Port Index (WPI)](https://msi.nga.mil/Publications/WPI) 2019 via geographic buffering. Geographic buffering (a.k.a Geodesic buffering) are those that account for the actual shape of the earth (an ellipsoid, or more properly, a geoid). Distances are calculated between two points on a curved surface (the geoid) as opposed to two points on a flat surface (the Cartesian plane). You should always consider creating geodesic buffers when your input features are dispersed (cover multiple UTM zones, large regions, or even the whole globe). Bounding boxes are then created from these bounding boxes as these are much simpler geographci objects and the intended use is as a pre-filter and data reduction using these as spatial filters. 
-
 * Source: Justin McGurk (Statistics Ireland)
 * Preview (header and first two rows, in total 3630 ports)
 <table>
@@ -51,8 +51,8 @@ To provide an overview of the cookbook without requiring access to UNGP, we have
 pd_ports = pd.read_csv('https://raw.githubusercontent.com/UNECE/AIS/master/wpi_12nm_bounding_box_port.csv')
 ```
 
-## Data set: AIS count by H3 hexagons in Richard's Bay
-* Description: This data set contains the number of AIS signals by H3 hexagons (from 2022-03-01 to 2022-03-07) in Richard's Bay. For more information, see Section 4 of cookbook above. 
+## Data set for cookbook (for Google colab version): AIS count by H3 hexagons in Richard's Bay
+* Description: This data set contains the number of AIS signals (from 2022-03-01 to 2022-03-07) in Richard's Bay by H3 hexagons. For more information, see Section 4 of cookbook above. 
 * Preview (header and first two rows, in total 14 hexagons)
 <table>
 <tbody>
