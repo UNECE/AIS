@@ -2,6 +2,26 @@
 
 Repository for ONS-UNECE Machine Learning Group 2022 AIS Theme Grouop
 
+## Code: AIS Berth Polygon Cookbook
+Port Polygons are important for generating statistics based on geospatial filtering e.g. port visits, anchoring patterns, etc. There exists no standard for generating polygons at the microdetail needed by most applications. The cookbook aims at demonstrating a standard algorithm/method for self generating berth (an area where the cargo is loaded or discharged on and off the ships) polygons by using AIS positions and port location data. The cookbook consists of 6 sections:
+
+**1) Set-up**: install packages and pre-defined modules
+
+**2) Port data**: import and visualise port (point-wise location) data
+
+**3) H3 data**: create and visualise a set of H3 hexagons to be used as filter for AIS
+
+**4) AIS data**: import and filter AIS raw data 
+
+**5) Berth polygons**: create berth polygons based on count of AIS signal within H3 hexagons
+
+**6) Berth polygons using DBSCAN**: create refined version of berth polygons using DBSCAN based on count of AIS signals within (high-resolution) H3 hexagons. 
+
+
+## Code: Google colab version of AIS Berth Polygon Cookbook
+Executing the full version of the code is possible through [UN Global Platform (UNGP)](https://unstats.un.org/bigdata/un-global-platform.cshtml) as the access to raw AIS data is only available through UNGP. To help Google colab version is a light version of the full cookbook that contains parts that do not require raw AIS data access. The colab version is available [here](https://colab.research.google.com/drive/1UwFPDhD1OxAmED6uvMSGS-ZgUPrRVMXY?usp=sharing).
+
+
 ## Data set: 12nm bounding box based on World Port Index
 
 * Description: This is bounding boxes developed using GIS software to create 12 nauticle mile bounding boxes on each port in the [World Port Index (WPI)](https://msi.nga.mil/Publications/WPI) 2019 via geographic buffering. Geographic buffering (a.k.a Geodesic buffering) are those that account for the actual shape of the earth (an ellipsoid, or more properly, a geoid). Distances are calculated between two points on a curved surface (the geoid) as opposed to two points on a flat surface (the Cartesian plane). You should always consider creating geodesic buffers when your input features are dispersed (cover multiple UTM zones, large regions, or even the whole globe). Bounding boxes are then created from these bounding boxes as these are much simpler geographci objects and the intended use is as a pre-filter and data reduction using these as spatial filters. 
@@ -22,15 +42,31 @@ Repository for ONS-UNECE Machine Learning Group 2022 AIS Theme Grouop
   </tbody>
   </table>
 
-
-
 * Example of reading the dataset in python
 
 ```
 pd_ports = pd.read_csv('https://raw.githubusercontent.com/UNECE/AIS/master/wpi_12nm_bounding_box_port.csv')
 ```
 
+## Data set: AIS count by H3 hexagons in Richard's Bay
+* Description: This data set contains the number of AIS signals by H3 hexagons (from 2022-03-01 to 2022-03-07) in Richard's Bay. For more information, see Section 4 of cookbook above. 
+* Preview (header and first two rows, in total 14 hexagons)
+<table>
+<tbody>
+  <tr>
+    <td> ID	</td> <td>  H3_int_index_8	 </td> <td> count </td> 
+  </tr>
+  <tr>
+    <td> 0 </td> <td>  	615813676340871167  </td> <td>  	2577	 </td> 
+   </tr>
+   <tr>
+  <td> 1 </td> <td>  	615813676412174335  </td> <td>  1377 </td> 
+</tr>
+  </tbody>
+  </table>
 
-## AIS Berth Polygon Cookbook
+* Example of reading the dataset in python
 
-## Simplified Google colab version of AIS Berth Polygon Cookbook 
+```
+moored_areas = pd.read_csv('https://raw.githubusercontent.com/UNECE/AIS/master/AIS_count_RichardsBay_example_for_demonstration.csv')
+```
