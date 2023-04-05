@@ -1,6 +1,6 @@
 # AIS
 
-Repository for ONS-UNECE Machine Learning Group 2022 AIS Theme Grouop
+Outputs from [ONS-UNECE Machine Learning Group 2022 AIS Theme Grouop](https://statswiki.unece.org/display/ML/Machine+Learning+Group+2022)
 
 ## Code: AIS Berth Polygon Cookbook
 Port Polygons are important for generating statistics based on geospatial filtering e.g. port visits, anchoring patterns, etc. There exists no standard for generating polygons at the microdetail needed by most applications. The cookbook aims at demonstrating a standard algorithm/method for self generating berth (an area where the cargo is loaded or discharged on and off the ships) polygons by using AIS positions and port location data. The cookbook consists of 6 sections:
@@ -23,7 +23,7 @@ The cookbook is available here (link to be made available).
 ## Code: Google colab version of AIS Berth Polygon Cookbook
 Please note that in order to execute the full version of the code, access to raw AIS data is required, which is only available through the [UN Global Platform (UNGP)](https://unstats.un.org/bigdata/un-global-platform.cshtml). 
 
-To provide an overview of the cookbook without requiring access to UNGP, we have created a light version of the cookbook in Google Colab. The Colab version contains only the parts of the cookbook that do not require raw AIS data access. You can access the Colab version of the cookbook [here](https://colab.research.google.com/drive/1UwFPDhD1OxAmED6uvMSGS-ZgUPrRVMXY?usp=sharing).
+To provide an overview of the cookbook without requiring access to UNGP, we have created a light version of the cookbook in Google Colab. The Colab version contains only the parts of the cookbook that do not require raw AIS data access. You can access the Colab version of the cookbook [here](https://colab.research.google.com/drive/1ISl-Y1P6yQZBAwStqtWVa8AQlHScOvH4?usp=sharing).
 
 
 ## Data set for cookbook: 12nm bounding box based on World Port Index
