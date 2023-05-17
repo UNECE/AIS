@@ -1,6 +1,6 @@
 # AIS
 
-Outputs from [ONS-UNECE Machine Learning Group 2022 AIS Theme Grouop](https://statswiki.unece.org/display/ML/Machine+Learning+Group+2022)
+Outputs from [ONS-UNECE Machine Learning Group 2022 AIS Theme Group](https://statswiki.unece.org/display/ML/Machine+Learning+Group+2022)
 
 ## Code: AIS Berth Polygon Cookbook
 Port Polygons are important for generating statistics based on geospatial filtering e.g. port visits, anchoring patterns, etc. There exists no standard for generating polygons at the microdetail needed by most applications. The cookbook aims at demonstrating a standard algorithm/method for self generating berth (an area where the cargo is loaded or discharged on and off the ships) polygons by using AIS positions and port location data. The cookbook consists of 6 sections:
